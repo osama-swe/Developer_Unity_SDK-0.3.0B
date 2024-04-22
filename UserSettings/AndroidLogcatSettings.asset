@@ -1,0 +1,220 @@
+{
+    "m_SelectedDeviceId": "R58T34B5A3L",
+    "m_SelectedProcess": {
+        "deviceId": "R58T34B5A3L",
+        "name": "com.ARWAY.navigator",
+        "processId": 16633,
+        "exited": false
+    },
+    "m_SelectedPriority": 0,
+    "m_KnownProcessesForSerialization": [
+        {
+            "deviceId": "R58T34B5A3L",
+            "name": "com.ARWAY.navigator",
+            "processId": 24818,
+            "exited": true
+        },
+        {
+            "deviceId": "R58T34B5A3L",
+            "name": "com.ARWAY.navigator",
+            "processId": 31092,
+            "exited": true
+        },
+        {
+            "deviceId": "R58T34B5A3L",
+            "name": "com.ARWAY.navigator",
+            "processId": 4581,
+            "exited": true
+        },
+        {
+            "deviceId": "R58T34B5A3L",
+            "name": "com.ARWAY.navigator",
+            "processId": 24045,
+            "exited": true
+        },
+        {
+            "deviceId": "R58T34B5A3L",
+            "name": "com.ARWAY.navigator",
+            "processId": 13304,
+            "exited": false
+        },
+        {
+            "deviceId": "R58T34B5A3L",
+            "name": "com.ARWAY.navigator",
+            "processId": 16881,
+            "exited": false
+        },
+        {
+            "deviceId": "R58T34B5A3L",
+            "name": "com.ARWAY.navigator",
+            "processId": 19421,
+            "exited": false
+        },
+        {
+            "deviceId": "R58T34B5A3L",
+            "name": "com.ARWAY.navigator",
+            "processId": 20638,
+            "exited": false
+        },
+        {
+            "deviceId": "R58T34B5A3L",
+            "name": "com.ARWAY.navigator",
+            "processId": 22240,
+            "exited": false
+        },
+        {
+            "deviceId": "R58T34B5A3L",
+            "name": "com.ARWAY.navigator",
+            "processId": 25446,
+            "exited": false
+        },
+        {
+            "deviceId": "R58T34B5A3L",
+            "name": "com.ARWAY.navigator",
+            "processId": 28023,
+            "exited": false
+        },
+        {
+            "deviceId": "R58T34B5A3L",
+            "name": "com.ARWAY.navigator",
+            "processId": 31683,
+            "exited": false
+        },
+        {
+            "deviceId": "R58T34B5A3L",
+            "name": "com.ARWAY.navigator",
+            "processId": 1289,
+            "exited": false
+        },
+        {
+            "deviceId": "R58T34B5A3L",
+            "name": "com.ARWAY.navigator",
+            "processId": 4149,
+            "exited": false
+        },
+        {
+            "deviceId": "R58T34B5A3L",
+            "name": "com.ARWAY.navigator",
+            "processId": 5853,
+            "exited": false
+        },
+        {
+            "deviceId": "R58T34B5A3L",
+            "name": "com.ARWAY.navigator",
+            "processId": 7162,
+            "exited": false
+        },
+        {
+            "deviceId": "R58T34B5A3L",
+            "name": "com.ARWAY.navigator",
+            "processId": 8858,
+            "exited": false
+        },
+        {
+            "deviceId": "R58T34B5A3L",
+            "name": "com.ARWAY.navigator",
+            "processId": 9919,
+            "exited": false
+        },
+        {
+            "deviceId": "R58T34B5A3L",
+            "name": "com.ARWAY.navigator",
+            "processId": 12547,
+            "exited": false
+        },
+        {
+            "deviceId": "R58T34B5A3L",
+            "name": "com.ARWAY.navigator",
+            "processId": 15288,
+            "exited": false
+        },
+        {
+            "deviceId": "R58T34B5A3L",
+            "name": "com.ARWAY.navigator",
+            "processId": 16633,
+            "exited": false
+        }
+    ],
+    "m_Tags": {
+        "m_Entries": [
+            {
+                "m_Name": "Filter by all listed tags",
+                "m_Selected": false
+            },
+            {
+                "m_Name": "No Filter",
+                "m_Selected": true
+            },
+            {
+                "m_Name": "",
+                "m_Selected": false
+            },
+            {
+                "m_Name": "Tag Control...",
+                "m_Selected": false
+            },
+            {
+                "m_Name": "",
+                "m_Selected": false
+            },
+            {
+                "m_Name": "Unity",
+                "m_Selected": false
+            },
+            {
+                "m_Name": "CRASH",
+                "m_Selected": false
+            }
+        ]
+    },
+    "m_ExtraWindowState": {
+        "Type": 0,
+        "Height": 0.0
+    },
+    "m_MemoryViewerState": {
+        "MemoryWindowWidth": 170.0,
+        "MemoryTypeEnabled": [
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true
+        ],
+        "MemoryGroup": 2,
+        "AutoCapture": true
+    },
+    "m_FilterOptions": {
+        "m_Filter": "",
+        "m_UseRegularExpressions": false,
+        "m_MatchCase": false
+    },
+    "m_SymbolPaths": [],
+    "m_CaptureVideoSettings": {
+        "TimeLimitEnabled": false,
+        "TimeLimit": 180,
+        "VideoSizeEnabled": false,
+        "VideoSizeX": 1280,
+        "VideoSizeY": 720,
+        "BitRateEnabled": false,
+        "BitRateK": 20000,
+        "DisplayIdEnabled": false,
+        "DisplayId": ""
+    },
+    "m_InputSettings": {
+        "ShiftModifier": false,
+        "SendText": "",
+        "PosixKillSignal": 0,
+        "TargetProcess": {
+            "deviceId": "",
+            "name": "",
+            "processId": 0,
+            "exited": false
+        }
+    },
+    "m_AutoScroll": 1
+}

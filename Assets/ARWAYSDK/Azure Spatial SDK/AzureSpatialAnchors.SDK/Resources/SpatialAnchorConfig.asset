@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 45b0089a7785abf4f908eb77852f8a71, type: 3}
+  m_Name: SpatialAnchorConfig
+  m_EditorClassIdentifier: 
+  authenticationMode: 0
+  spatialAnchorsAccountId: 69d870f5-e064-4156-a8fc-9f63b78ef8bf
+  spatialAnchorsAccountKey: WP7jKGGRAlxSLDZ/76BBxma+pC0ScvU2JBeptffQB2k=
+  spatialAnchorsAccountDomain: eastus.mixedreality.azure.com
+  clientId: 69d870f5-e064-4156-a8fc-9f63b78ef8bf
+  tenantId: ad2a8324-bef7-46a8-adb4-fe51b6613b24
