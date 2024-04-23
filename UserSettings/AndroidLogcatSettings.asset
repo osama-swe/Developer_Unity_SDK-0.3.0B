@@ -3,7 +3,7 @@
     "m_SelectedProcess": {
         "deviceId": "R58T34B5A3L",
         "name": "com.ARWAY.navigator",
-        "processId": 16633,
+        "processId": 21606,
         "exited": false
     },
     "m_SelectedPriority": 0,
@@ -133,6 +133,42 @@
             "name": "com.ARWAY.navigator",
             "processId": 16633,
             "exited": false
+        },
+        {
+            "deviceId": "R58T34B5A3L",
+            "name": "com.ARWAY.navigator",
+            "processId": 25690,
+            "exited": false
+        },
+        {
+            "deviceId": "R58T34B5A3L",
+            "name": "com.ARWAY.navigator",
+            "processId": 4613,
+            "exited": false
+        },
+        {
+            "deviceId": "R58T34B5A3L",
+            "name": "com.ARWAY.navigator",
+            "processId": 7916,
+            "exited": false
+        },
+        {
+            "deviceId": "R58T34B5A3L",
+            "name": "com.ARWAY.navigator",
+            "processId": 9956,
+            "exited": false
+        },
+        {
+            "deviceId": "R58T34B5A3L",
+            "name": "com.ARWAY.navigator",
+            "processId": 17167,
+            "exited": false
+        },
+        {
+            "deviceId": "R58T34B5A3L",
+            "name": "com.ARWAY.navigator",
+            "processId": 21606,
+            "exited": false
         }
     ],
     "m_Tags": {
@@ -189,7 +225,7 @@
         "AutoCapture": true
     },
     "m_FilterOptions": {
-        "m_Filter": "",
+        "m_Filter": "ana hena",
         "m_UseRegularExpressions": false,
         "m_MatchCase": false
     },
