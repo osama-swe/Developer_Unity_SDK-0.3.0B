@@ -84,8 +84,8 @@ namespace Arway
             m_Sdk = ArwaySDK.Instance;
 
             //deleteMapURL = m_Sdk.ContentServer + EndPoint.DELETE_CLOUD_MAP;
-            uploadURL = m_Sdk.ContentServer + EndPoint.MAP_UPLOAD;
-            devToken = m_Sdk.developerToken;
+            uploadURL = m_Sdk.ContentServer + EndPoint.MAP_UPLOAD; //osama xxxxxxxxxxx
+            devToken = "m_Sdk.developerToken"; //osama here
 
             if (devToken != null)
                 mapperClient.DefaultRequestHeaders.Add("dev-token", devToken);
@@ -112,7 +112,8 @@ namespace Arway
             {
                 //StartCoroutine(uploadMapData(mapNameText.text));
 
-                loaderText.text = "Getting ANCHOR_ID...";
+                loaderText.text = "osama xx Getting ANCHOR_ID...";
+                
                 mLoader.SetActive(true);
                 moveDeviceAnim.SetActive(false);
 
@@ -132,7 +133,10 @@ namespace Arway
             yield return new WaitForSeconds(1f);
 
             string anchor_id = CreateAnchor.getCurrentAnchorId();
-            Debug.Log("anchor_id  " + anchor_id);
+            Debug.Log("osama -- UM --checkForAnchorId --  anchor_id  " + anchor_id);
+            Debug.Log("osama -- UM --checkForAnchorId --  dev_token  " + devToken);
+            Debug.Log("osama -- UM --checkForAnchorId --  url  " + uploadURL);
+            Debug.Log("osama -- UM --checkForAnchorId --  anchor_id  " + anchor_id);
             attempts++;
 
             if (attempts < attemptLimit)
@@ -141,11 +145,11 @@ namespace Arway
                 {
                     mLoader.SetActive(false);
                     StartCoroutine(checkForAnchorId(map_name));
-                    Debug.Log("Anchor Id is null!!");
+                    Debug.Log("osama xx Anchor Id is null!!");
                 }
                 else
                 {
-                    Debug.Log("Anchor Id exist.");
+                    Debug.Log("osama xx  Anchor Id exist.");
                     //StartCoroutine(uploadMapData(map_name, anchor_id));
 
                     ReadyToUploadMap(map_name, anchor_id);
