@@ -29,6 +29,7 @@ public class CreateAnchor : DemoScriptBase
     {
         get
         {
+            Debug.Log("osama XX currentAppState GET is " + _currentAppState);
             return _currentAppState;
         }
         set
@@ -43,12 +44,13 @@ public class CreateAnchor : DemoScriptBase
                     feedbackBox.text = stateParams[_currentAppState].StepMessage;
                 }
             }
+            Debug.Log("osama XX currentAppState SET is " + _currentAppState);
         }
     }
 
     [HideInInspector]
     public static string currentAnchorId = "";
-    
+
     public static Vector3 ARCameraPos = Vector3.zero;
     public static Quaternion ARCameraRot = Quaternion.identity;
 
@@ -58,8 +60,6 @@ public class CreateAnchor : DemoScriptBase
     /// </summary>
     public override void Start()
     {
-        Debug.Log(">>Azure Spatial Anchors Create And Host Anchor");
-
         base.Start();
 
         if (!SanityCheckAccessConfiguration())
@@ -68,7 +68,7 @@ public class CreateAnchor : DemoScriptBase
         }
         feedbackBox.text = stateParams[currentAppState].StepMessage;
 
-        Debug.Log("Azure Spatial Anchors script started");
+        Debug.Log("osama XX Azure Spatial Anchors script started");
         Debug.Log("Start: " + currentAnchorId);
     }
 
@@ -105,6 +105,7 @@ public class CreateAnchor : DemoScriptBase
 
     protected override bool IsPlacingObject()
     {
+        Debug.Log("osama xx IsPlacingObject id is " + currentCloudAnchor.Identifier);
         return currentAppState == AppState.DemoStepCreateSession;
     }
 
@@ -139,7 +140,7 @@ public class CreateAnchor : DemoScriptBase
 
     protected override void OnSaveCloudAnchorFailed(Exception exception)
     {
-        Debug.Log("OnSaveCloudAnchorFailed:  " + currentAnchorId);
+        Debug.Log("osama xx OnSaveCloudAnchorFailed:  " + currentAnchorId);
         base.OnSaveCloudAnchorFailed(exception);
 
         currentAnchorId = string.Empty;
@@ -156,15 +157,19 @@ public class CreateAnchor : DemoScriptBase
                 {
                     await CloudManager.CreateSessionAsync();
                 }
-                Debug.Log("AdvanceDemoAsync - create session: " + currentAnchorId);
+                Debug.Log("osama xx AdvanceDemoAsync - create session: " + currentAnchorId);
                 currentAnchorId = "";
                 currentCloudAnchor = null;
 
                 await CloudManager.StartSessionAsync();
+                Debug.Log("osama xx CloudManager - after await CloudManager clientId: " + CloudManager.ClientId);
+                Debug.Log("osama xx CloudManager - after await CloudManager didAwake: " + CloudManager.didAwake);
+                Debug.Log("osama xx CloudManager - after await CloudManager didStart: " + CloudManager.didStart);
+
                 ARCameraPos = Camera.main.transform.position;
                 ARCameraRot = Quaternion.identity;
-                Debug.Log("ARCameraPos: " + ARCameraPos);
-                Debug.Log("ARCameraRot: " + ARCameraRot);
+                Debug.Log("osama xx ARCameraPos: " + ARCameraPos);
+                Debug.Log("osama xx ARCameraRot: " + ARCameraRot);
 
 
                 // Create Anchor At Camera Transform
@@ -174,7 +179,7 @@ public class CreateAnchor : DemoScriptBase
                 break;
             case AppState.DemoStepStopSession:
                 currentAppState = AppState.DemoStepBusy;
-                Debug.Log("stop session: " + currentAnchorId);
+                Debug.Log("osama xx stop session: " + currentAnchorId);
                 if (spawnedObject != null)
                 {
                     await SaveCurrentObjectAnchorToCloudAsync();
