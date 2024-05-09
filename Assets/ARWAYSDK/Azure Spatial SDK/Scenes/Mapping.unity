@@ -4457,12 +4457,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2ef4e40d29b7a564f86f3d2f0abca194, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  authenticationMode: 0
+  authenticationMode: 1
   spatialAnchorsAccountId: 69d870f5-e064-4156-a8fc-9f63b78ef8bf
   spatialAnchorsAccountKey: WP7jKGGRAlxSLDZ/76BBxma+pC0ScvU2JBeptffQB2k=
   spatialAnchorsAccountDomain: eastus.mixedreality.azure.com
-  clientId: 9bcaaf41-2b08-4c43-ad39-b49c9231e778
-  tenantId: 4947534b-f74c-4652-9504-2235b5ff0a09
+  clientId: 69d870f5-e064-4156-a8fc-9f63b78ef8bf
+  tenantId: ad2a8324-bef7-46a8-adb4-fe51b6613b24
   logLevel: 2
 --- !u!4 &1068461534
 Transform:

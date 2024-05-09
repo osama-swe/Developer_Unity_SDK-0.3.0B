@@ -162,6 +162,13 @@ public class CreateAnchor : DemoScriptBase
                 currentCloudAnchor = null;
 
                 await CloudManager.StartSessionAsync();
+                Debug.Log("osama xx CloudManager - after await CloudManager session status: " + CloudManager.SessionStatus.ReadyForCreateProgress);
+                Debug.Log("osama xx CloudManager - after await CloudManager session status: " + CloudManager.SessionStatus);
+                Debug.Log("osama xx CloudManager - after await CloudManager session status: " + CloudManager.SessionStatus.ToString());
+                Debug.Log("osama xx CloudManager - after await CloudManager account id: " + CloudManager.SpatialAnchorsAccountId);
+                Debug.Log("osama xx CloudManager - after await CloudManager account key: " + CloudManager.SpatialAnchorsAccountKey);
+                Debug.Log("osama xx CloudManager - after await CloudManager account domain: " + CloudManager.SpatialAnchorsAccountDomain);
+                Debug.Log("osama xx CloudManager - after await CloudManager mode: " + CloudManager.AuthenticationMode);
                 Debug.Log("osama xx CloudManager - after await CloudManager clientId: " + CloudManager.ClientId);
                 Debug.Log("osama xx CloudManager - after await CloudManager didAwake: " + CloudManager.didAwake);
                 Debug.Log("osama xx CloudManager - after await CloudManager didStart: " + CloudManager.didStart);
