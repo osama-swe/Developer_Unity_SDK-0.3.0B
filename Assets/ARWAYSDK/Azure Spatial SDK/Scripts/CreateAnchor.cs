@@ -189,12 +189,18 @@ public class CreateAnchor : DemoScriptBase
                 Debug.Log("osama xx stop session: " + currentAnchorId);
                 if (spawnedObject != null)
                 {
+                    Debug.Log("osama xx stop spawnedObject!= null: " + spawnedObject);
                     await SaveCurrentObjectAnchorToCloudAsync();
+                    Debug.Log("osama zzz done await: " + spawnedObject);
                 }
                 else
                 {
+                    
+                    Debug.Log("osama xx stop spawnedObject == null: " + spawnedObject);
                     SpawnOrMoveCurrentAnchoredObject(ARCameraPos, ARCameraRot);
+                    Debug.Log("osama xx stop spawnedObject == null: " + spawnedObject);
                     await SaveCurrentObjectAnchorToCloudAsync();
+                    Debug.Log("osama zzz done await: " + spawnedObject);
                 }
 
                 CloudManager.StopSession();
