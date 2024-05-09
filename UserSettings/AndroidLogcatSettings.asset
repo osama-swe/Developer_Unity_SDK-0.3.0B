@@ -3,7 +3,7 @@
     "m_SelectedProcess": {
         "deviceId": "R58T34B5A3L",
         "name": "com.ARWAY.navigator",
-        "processId": 21606,
+        "processId": 7807,
         "exited": false
     },
     "m_SelectedPriority": 0,
@@ -169,6 +169,36 @@
             "name": "com.ARWAY.navigator",
             "processId": 21606,
             "exited": false
+        },
+        {
+            "deviceId": "R58T34B5A3L",
+            "name": "com.ARWAY.navigator",
+            "processId": 24902,
+            "exited": false
+        },
+        {
+            "deviceId": "R58T34B5A3L",
+            "name": "com.ARWAY.navigator",
+            "processId": 2614,
+            "exited": false
+        },
+        {
+            "deviceId": "R58T34B5A3L",
+            "name": "com.ARWAY.navigator",
+            "processId": 32366,
+            "exited": false
+        },
+        {
+            "deviceId": "R58T34B5A3L",
+            "name": "com.ARWAY.navigator",
+            "processId": 8208,
+            "exited": false
+        },
+        {
+            "deviceId": "R58T34B5A3L",
+            "name": "com.ARWAY.navigator",
+            "processId": 7807,
+            "exited": false
         }
     ],
     "m_Tags": {
@@ -225,7 +255,7 @@
         "AutoCapture": true
     },
     "m_FilterOptions": {
-        "m_Filter": "ana hena",
+        "m_Filter": "",
         "m_UseRegularExpressions": false,
         "m_MatchCase": false
     },
@@ -252,5 +282,5 @@
             "exited": false
         }
     },
-    "m_AutoScroll": 1
+    "m_AutoScroll": 0
 }

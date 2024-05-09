@@ -48,6 +48,7 @@ public class CreateAnchor : DemoScriptBase
 
     [HideInInspector]
     public static string currentAnchorId = "";
+    
     public static Vector3 ARCameraPos = Vector3.zero;
     public static Quaternion ARCameraRot = Quaternion.identity;
 
@@ -68,6 +69,7 @@ public class CreateAnchor : DemoScriptBase
         feedbackBox.text = stateParams[currentAppState].StepMessage;
 
         Debug.Log("Azure Spatial Anchors script started");
+        Debug.Log("Start: " + currentAnchorId);
     }
 
     protected override void OnCloudAnchorLocated(AnchorLocatedEventArgs args)
@@ -77,6 +79,7 @@ public class CreateAnchor : DemoScriptBase
         if (args.Status == LocateAnchorStatus.Located)
         {
             currentCloudAnchor = args.Anchor;
+            Debug.Log("osama 1 currentCloudAnchor id is " + currentCloudAnchor.Identifier);
 
             UnityDispatcher.InvokeOnAppThread(() =>
             {
@@ -84,6 +87,7 @@ public class CreateAnchor : DemoScriptBase
 
 #if UNITY_ANDROID || UNITY_IOS
                 anchorPose = currentCloudAnchor.GetPose();
+                Debug.Log("osama 2 currentCloudAnchor pose is " + anchorPose);
 #endif
                 // HoloLens: The position will be set based on the unityARUserAnchor that was located.
                 SpawnOrMoveCurrentAnchoredObject(anchorPose.position, anchorPose.rotation);
@@ -111,10 +115,11 @@ public class CreateAnchor : DemoScriptBase
         Debug.Log("Anchor created, yay!");
 
         currentAnchorId = currentCloudAnchor.Identifier;
+        Debug.Log("osama 3 currentCloudAnchor id is " + currentCloudAnchor.Identifier);
 
         PlayerPrefs.SetString("CURR_ANCHOR_ID", currentAnchorId);
 
-        Debug.Log("ANCHOR ID :- " + currentAnchorId);
+        Debug.Log("yay ANCHOR ID :- " + currentAnchorId);
         NotificationManager.Instance.GenerateSuccess("ANCHOR ID :- " + currentAnchorId);
         // Sanity check that the object is still where we expect
         Pose anchorPose = Pose.identity;
@@ -122,6 +127,9 @@ public class CreateAnchor : DemoScriptBase
 #if UNITY_ANDROID || UNITY_IOS
         anchorPose = currentCloudAnchor.GetPose();
 #endif
+
+        Debug.Log("osama 4 currentCloudAnchor id is " + currentCloudAnchor.Identifier);
+
         // HoloLens: The position will be set based on the unityARUserAnchor that was located.
 
         SpawnOrMoveCurrentAnchoredObject(anchorPose.position, anchorPose.rotation);
@@ -131,6 +139,7 @@ public class CreateAnchor : DemoScriptBase
 
     protected override void OnSaveCloudAnchorFailed(Exception exception)
     {
+        Debug.Log("OnSaveCloudAnchorFailed:  " + currentAnchorId);
         base.OnSaveCloudAnchorFailed(exception);
 
         currentAnchorId = string.Empty;
@@ -147,13 +156,16 @@ public class CreateAnchor : DemoScriptBase
                 {
                     await CloudManager.CreateSessionAsync();
                 }
-
+                Debug.Log("AdvanceDemoAsync - create session: " + currentAnchorId);
                 currentAnchorId = "";
                 currentCloudAnchor = null;
 
                 await CloudManager.StartSessionAsync();
                 ARCameraPos = Camera.main.transform.position;
                 ARCameraRot = Quaternion.identity;
+                Debug.Log("ARCameraPos: " + ARCameraPos);
+                Debug.Log("ARCameraRot: " + ARCameraRot);
+
 
                 // Create Anchor At Camera Transform
                 SpawnOrMoveCurrentAnchoredObject(ARCameraPos, ARCameraRot);
@@ -162,7 +174,7 @@ public class CreateAnchor : DemoScriptBase
                 break;
             case AppState.DemoStepStopSession:
                 currentAppState = AppState.DemoStepBusy;
-
+                Debug.Log("stop session: " + currentAnchorId);
                 if (spawnedObject != null)
                 {
                     await SaveCurrentObjectAnchorToCloudAsync();
@@ -181,6 +193,7 @@ public class CreateAnchor : DemoScriptBase
 
                 break;
             case AppState.DemoStepBusy:
+                Debug.Log("DemoStepBusy: " + currentAnchorId);
                 break;
             default:
                 Debug.Log("Shouldn't get here for app state " + currentAppState.ToString());
