@@ -85,8 +85,10 @@ namespace Arway
 
             //deleteMapURL = m_Sdk.ContentServer + EndPoint.DELETE_CLOUD_MAP;
             uploadURL = m_Sdk.ContentServer + EndPoint.MAP_UPLOAD; //osama xxxxxxxxxxx
-            devToken = "m_Sdk.developerToken"; //osama here
-            
+            devToken = m_Sdk.developerToken; //osama here
+            Debug.Log("osama xx dev token" + devToken);
+            Debug.Log("osama xx url" + uploadURL);
+
             if (devToken != null)
                 mapperClient.DefaultRequestHeaders.Add("dev-token", devToken);
             else

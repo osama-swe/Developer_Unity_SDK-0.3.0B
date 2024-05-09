@@ -3,7 +3,7 @@
     "m_SelectedProcess": {
         "deviceId": "R58T34B5A3L",
         "name": "com.ARWAY.navigator",
-        "processId": 7807,
+        "processId": 17381,
         "exited": false
     },
     "m_SelectedPriority": 0,
@@ -199,6 +199,42 @@
             "name": "com.ARWAY.navigator",
             "processId": 7807,
             "exited": false
+        },
+        {
+            "deviceId": "R58T34B5A3L",
+            "name": "com.ARWAY.navigator",
+            "processId": 19477,
+            "exited": false
+        },
+        {
+            "deviceId": "R58T34B5A3L",
+            "name": "com.ARWAY.navigator",
+            "processId": 26303,
+            "exited": false
+        },
+        {
+            "deviceId": "R58T34B5A3L",
+            "name": "com.ARWAY.navigator",
+            "processId": 4531,
+            "exited": false
+        },
+        {
+            "deviceId": "R58T34B5A3L",
+            "name": "com.ARWAY.navigator",
+            "processId": 10528,
+            "exited": false
+        },
+        {
+            "deviceId": "R58T34B5A3L",
+            "name": "com.ARWAY.navigator",
+            "processId": 14503,
+            "exited": false
+        },
+        {
+            "deviceId": "R58T34B5A3L",
+            "name": "com.ARWAY.navigator",
+            "processId": 17381,
+            "exited": false
         }
     ],
     "m_Tags": {
@@ -255,7 +291,7 @@
         "AutoCapture": true
     },
     "m_FilterOptions": {
-        "m_Filter": "",
+        "m_Filter": "osama",
         "m_UseRegularExpressions": false,
         "m_MatchCase": false
     },

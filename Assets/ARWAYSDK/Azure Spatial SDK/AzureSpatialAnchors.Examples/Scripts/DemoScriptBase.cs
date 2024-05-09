@@ -67,6 +67,11 @@ namespace Microsoft.Azure.SpatialAnchors.Unity.Examples
 
         public virtual bool SanityCheckAccessConfiguration()
         {
+            Debug.Log("osama xx sanitycheck");
+            CloudManager.SpatialAnchorsAccountId = "69d870f5-e064-4156-a8fc-9f63b78ef8bf";
+            CloudManager.SpatialAnchorsAccountKey = "WP7jKGGRAlxSLDZ/76BBxma+pC0ScvU2JBeptffQB2k=";
+            CloudManager.SpatialAnchorsAccountDomain = "eastus.mixedreality.azure.com";
+            CloudManager.TenantId = "ad2a8324-bef7-46a8-adb4-fe51b6613b24";
             if (string.IsNullOrWhiteSpace(CloudManager.SpatialAnchorsAccountId)
                 || string.IsNullOrWhiteSpace(CloudManager.SpatialAnchorsAccountKey)
                 || string.IsNullOrWhiteSpace(CloudManager.SpatialAnchorsAccountDomain))
