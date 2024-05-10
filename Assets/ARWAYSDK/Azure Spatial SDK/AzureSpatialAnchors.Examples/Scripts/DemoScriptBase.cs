@@ -438,21 +438,29 @@ namespace Microsoft.Azure.SpatialAnchors.Unity.Examples
         {
             // Get the cloud-native anchor behavior
             CloudNativeAnchor cna = spawnedObject.GetComponent<CloudNativeAnchor>();
-
+            Debug.Log("osama 🙍‍♀️🙍‍♀️🙍‍♀️ : CloudNativeAnchor cna: " + cna.ToString());
             // If the cloud portion of the anchor hasn't been created yet, create it
             if (cna.CloudAnchor == null) { cna.NativeToCloud(); }
-
+            Debug.Log("osama 🙍‍♀️🙍‍♀️🙍‍♀️ : CloudNativeAnchor cna2: " + cna.ToString());
+            
             // Get the cloud portion of the anchor
             CloudSpatialAnchor cloudAnchor = cna.CloudAnchor;
 
+            Debug.Log("osama 🙍‍♀️🙍‍♀️🙍‍♀️ : CloudSpatialAnchor cloudAnchor.Identifier : " + cloudAnchor.Identifier);
+            Debug.Log("osama 🙍‍♀️🙍‍♀️🙍‍♀️ : CloudSpatialAnchor cloudAnchor.Expiration : " + cloudAnchor.Expiration);
+            Debug.Log("osama 🙍‍♀️🙍‍♀️🙍‍♀️ : CloudSpatialAnchor cloudAnchor toString : " + cloudAnchor.ToString());
+            
             // In this sample app we delete the cloud anchor explicitly, but here we show how to set an anchor to expire automatically
             cloudAnchor.Expiration = DateTimeOffset.Now.AddDays(100);
+            Debug.Log("osama 🙍‍♀️🙍‍♀️🙍‍♀️ : CloudSpatialAnchor cloudAnchor.Expiration2 : " + cloudAnchor.Expiration);
 
             while (!CloudManager.IsReadyForCreate)
             {
+                Debug.Log("osama 🙍‍♀️🙍‍♀️🙍‍♀️ !CloudManager.IsReadyForCreate : We will wait for 330 3️⃣3️⃣3️⃣" );
+                Debug.Log("osama 🙍‍♀️🙍‍♀️🙍‍♀️ We are not ready yet" );
                 await Task.Delay(330);
                 float createProgress = CloudManager.SessionStatus.RecommendedForCreateProgress;
-                feedbackBox.text = $"Move your device to capture more environment data: {createProgress:0%}";
+                feedbackBox.text = $"Move your device to capture more environment data: {createProgress:0%}"; //Osama notice this
 
                 //Debug.Log("Progress: " + createProgress);
 
@@ -466,6 +474,7 @@ namespace Microsoft.Azure.SpatialAnchors.Unity.Examples
                 if (value >= 100)
                     XRUXPicker.Instance.HideProgressBar();
             }
+            Debug.Log("osama We are ready for create 🍾🍾🍾🍾🍾" );
 
             bool success = false;
 
@@ -474,27 +483,36 @@ namespace Microsoft.Azure.SpatialAnchors.Unity.Examples
             try
             {
                 // Actually save
+                Debug.Log("osama 🙍‍♀️🙍‍♀️🙍‍♀️ : tying to save");
+                Debug.Log("osama 🙍‍♀️🙍‍♀️🙍‍♀️ : CloudSpatialAnchor cloudAnchor.Identifier : " + cloudAnchor.Identifier);
                 await CloudManager.CreateAnchorAsync(cloudAnchor);
+                Debug.Log("osama passed CreateAnchorAsync await 🍾🍾🍾🍾");
 
                 // Store
                 currentCloudAnchor = cloudAnchor;
 
                 // Success?
                 success = currentCloudAnchor != null;
+                Debug.Log("osama 🙍‍♀️🙍‍♀️🙍‍♀️ success = currentCloudAnchor != null: (sucess) = " + success);
+
 
                 if (success && !isErrorActive)
                 {
                     // Await override, which may perform additional tasks
                     // such as storing the key in the AnchorExchanger
+                    Debug.Log("osama success && !isErrorActive 🍾🍾🍾🍾");
+
                     await OnSaveCloudAnchorSuccessfulAsync();
                 }
                 else
                 {
+                    Debug.Log("osama calling OnSaveCloudAnchorFailed ❌:: Failed to save, but no exception was thrown");
                     OnSaveCloudAnchorFailed(new Exception("Failed to save, but no exception was thrown."));
                 }
             }
             catch (Exception ex)
             {
+                Debug.Log("osama calling OnSaveCloudAnchorFailed ❌// exeption:: "+ex.Message);
                 OnSaveCloudAnchorFailed(ex);
             }
         }
